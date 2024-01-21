@@ -11,4 +11,4 @@ TIMEOUT=your_timeout </br>
 IDLE_TIMEOUT=your_idle_timeout </br>
 2) Запустить: docker build -t juniortz -f Dockerfile . </br>
 3) Запустить: docker-compose up </br>
-4) Запустить: docker exec -it juniortz-app-1 go run cmd/migrator/main.go --db-url=postgres://postgres:password@db:5432/juniortzdb?sslmode=disable </br>
+4) Запустить: docker exec -it {your_directory_name}-app-1 go run cmd/migrator/main.go --db-url=postgres://postgres:password@db:5432/juniortzdb?sslmode=disable </br>

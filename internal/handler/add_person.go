@@ -42,7 +42,3 @@ func (h Handler) AddPerson(w http.ResponseWriter, r *http.Request) {
 	h.log.Info().Msg("the request was successfully completed")
 	render.JSON(w, r, person)
 }
-
-//func validate(req AddHumanRequest) error {
-//	panic("implement me") //TODO
-//}

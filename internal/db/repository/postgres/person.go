@@ -98,8 +98,6 @@ func (r Repository) GetPeople(ctx context.Context, options person_usecase.GetPeo
 	query = r.addPagination(query, len(options.FilterOptions.Fields()))
 	values = append(values, options.Limit, options.Offset)
 
-	fmt.Println(query)
-	fmt.Println(values)
 	rows, err := r.db.QueryContext(ctx, query, values...)
 	if err != nil {
 		return nil, fmt.Errorf("%s:%w", op, err)

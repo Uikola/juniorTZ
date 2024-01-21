@@ -1,0 +1,22 @@
+version: '3'
+services:
+  app:
+    image: juniortz:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    restart: on-failure
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: juniortzdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
